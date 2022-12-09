@@ -3,6 +3,7 @@ package main
 import (
 	"gin-mongo-api/configs"
 	"gin-mongo-api/routes" //add this
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,5 +22,13 @@ func main() {
 	routes.LokasiTemuanRoute(router)
 	routes.KoordinatRoute(router)
 
-	router.Run("localhost:8080")
+	router.Run(":" + SetPort())
+}
+
+func SetPort() string {
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		port = "80"
+	}
+	return port
 }
