@@ -19,8 +19,9 @@ func main() {
 	routes.InvertebrataRoute(router) //add this
 	routes.VertebrataRoute(router)   //add this
 	routes.FosilRoute(router)        //add this
-	routes.LokasiTemuanRoute(router)
-	routes.KoordinatRoute(router)
+	routes.BatuanRoute(router)       //add this
+	routes.LokasiTemuanRoute(router) //add this
+	routes.KoordinatRoute(router)    //add this
 
 	router.Run(":" + SetPort())
 }
