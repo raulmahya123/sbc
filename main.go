@@ -15,13 +15,14 @@ func main() {
 	configs.ConnectDB()
 
 	//routes
-	routes.UserRoute(router)         //add this
-	routes.InvertebrataRoute(router) //add this
-	routes.VertebrataRoute(router)   //add this
-	routes.FosilRoute(router)        //add this
-	routes.BatuanRoute(router)       //add this
-	routes.LokasiTemuanRoute(router) //add this
-	routes.KoordinatRoute(router)    //add this
+	routes.UserRoute(router)              //add this
+	routes.InvertebrataRoute(router)      //add this
+	routes.VertebrataRoute(router)        //add this
+	routes.FosilRoute(router)             //add this
+	routes.BatuanRoute(router)            //add this
+	routes.SumberDayaGeologiRoute(router) //add this
+	routes.LokasiTemuanRoute(router)      //add this
+	routes.KoordinatRoute(router)         //add this
 
 	router.Run(":" + SetPort())
 }
